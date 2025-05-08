@@ -93,25 +93,28 @@
                 
                 <div class="contact-form-container">
                     <h2>Wyślij wiadomość</h2>
-                    <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
                         <input type="hidden" name="form-name" value="contact">
+                        <div hidden>
+                            <input name="bot-field">
+                        </div>
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required placeholder=" ">
                             <label for="name">Imię i nazwisko</label>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required placeholder=" ">
                             <label for="email">Email</label>
                         </div>
                         
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
                             <label for="subject">Temat</label>
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" required placeholder=" "></textarea>
                             <label for="message">Wiadomość</label>
                         </div>
                         
