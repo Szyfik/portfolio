@@ -26,6 +26,7 @@ Profesjonalna strona portfolio z responsywnym designem, ciemnym/jasnym motywem i
 1. Sklonuj repozytorium:
 ```bash
 git clone https://github.com/szyfik/portfolio.git
+
 cd portfolio
 ```
 
