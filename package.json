@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Profesjonalna strona portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "build": "npm run clean && npm run copy && npm run minify",
+    "clean": "rimraf dist",
+    "copy": "copyfiles -u 0 \"**/*.{html,css,js,jpg,png,svg}\" dist",
+    "minify": "npm run minify:html && npm run minify:css && npm run minify:js",
+    "minify:html": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true -o dist/index.html index.html",
+    "minify:css": "cleancss -o dist/assets/css/style.min.css assets/css/style.css",
+    "minify:js": "terser assets/js/main.js -o dist/assets/js/main.min.js"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "freelancer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.0",
+    "copyfiles": "^2.4.1",
+    "html-minifier": "^4.0.0",
+    "live-server": "^1.2.2",
+    "rimraf": "^3.0.2",
+    "terser": "^5.14.2"
+  }
+} 
