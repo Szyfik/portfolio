@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Przykłady realizacji projektów webowych">
+    <title>Portfolio | Filip Szykulski</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">FS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="about.html">O mnie</a></li>
+                <li><a href="services.html">Usługi</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Przełącz motyw">
+                <span class="theme-toggle-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-page">
+        <div class="container">
+            <h1>Moje projekty</h1>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="website">Strony WWW</button>
+                <button class="filter-btn" data-filter="shop">Sklepy</button>
+                <button class="filter-btn" data-filter="app">Aplikacje</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Projekt 1: Sklep z modą -->
+                <div class="portfolio-item" data-category="shop">
+                    <div class="portfolio-image">
+                        <img src="assets/img/portfolio/fashion-shop.jpg" alt="Sklep z modą" data-src="assets/img/portfolio/fashion-shop.jpg">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Moda & Styl</h3>
+                                <p>Nowoczesny sklep internetowy z modą</p>
+                                <a href="#" class="btn-view">Zobacz projekt</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>Moda & Styl</h3>
+                        <p>Kompleksowy sklep internetowy z modą, wyposażony w zaawansowany system zarządzania produktami, integrację z systemami płatności i kurierami.</p>
+                        <div class="portfolio-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projekt 2: Aplikacja do zarządzania projektami -->
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">
+                        <img src="assets/img/portfolio/project-manager.jpg" alt="Aplikacja do zarządzania projektami" data-src="assets/img/portfolio/project-manager.jpg">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>TaskMaster</h3>
+                                <p>Aplikacja do zarządzania projektami</p>
+                                <a href="#" class="btn-view">Zobacz projekt</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>TaskMaster</h3>
+                        <p>Nowoczesna aplikacja webowa do zarządzania projektami, z funkcjami współpracy w czasie rzeczywistym, śledzeniem postępów i integracją z popularnymi narzędziami.</p>
+                        <div class="portfolio-tech">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projekt 3: Strona restauracji -->
+                <div class="portfolio-item" data-category="website">
+                    <div class="portfolio-image">
+                        <img src="assets/img/portfolio/restaurant.jpg" alt="Strona restauracji" data-src="assets/img/portfolio/restaurant.jpg">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>La Bella Italia</h3>
+                                <p>Strona restauracji włoskiej</p>
+                                <a href="#" class="btn-view">Zobacz projekt</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-details">
+                        <h3>La Bella Italia</h3>
+                        <p>Elegancka strona restauracji z systemem rezerwacji online, menu online i integracją z Google Maps.</p>
+                        <div class="portfolio-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2024 Filip Szykulski. Wszelkie prawa zastrzeżone.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/twoje-username" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/twoje-username" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://twitter.com/twoje-username" target="_blank" rel="noopener">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+</body>
+</html> 
