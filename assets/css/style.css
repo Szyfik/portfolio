@@ -263,15 +263,72 @@ section h2 {
 
 /* Footer */
 .footer {
-    background-color: var(--bg-secondary);
-    padding: 2rem 0;
-    margin-top: 5rem;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 4rem 0 2rem;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-logo p {
+    max-width: 300px;
+    color: var(--text-muted);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link.github {
+    background-color: #24292e;
+}
+
+.social-link.linkedin {
+    background-color: #0077b5;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
 }
 
 /* About Page Styles */
@@ -480,22 +537,21 @@ section h2 {
 }
 
 .portfolio-item {
-    background-color: var(--bg-secondary);
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.portfolio-image {
-    position: relative;
-    overflow: hidden;
+.portfolio-item:hover {
+    transform: translateY(-10px);
 }
 
-.portfolio-image img {
+.portfolio-item img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
 .portfolio-overlay {
@@ -504,10 +560,12 @@ section h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(67, 97, 238, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -516,49 +574,45 @@ section h2 {
     opacity: 1;
 }
 
-.portfolio-item:hover .portfolio-image img {
-    transform: scale(1.1);
+.portfolio-overlay h3 {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
-.portfolio-info {
+.portfolio-overlay p {
+    color: var(--text-muted);
     text-align: center;
-    color: white;
-    padding: 2rem;
-}
-
-.btn-view {
-    display: inline-block;
-    background-color: white;
-    color: var(--accent-primary);
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-}
-
-.btn-view:hover {
-    background-color: var(--accent-secondary);
-    color: white;
-}
-
-.portfolio-details {
-    padding: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .portfolio-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .portfolio-tech span {
-    background-color: var(--bg-primary);
-    color: var(--accent-primary);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.875rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.portfolio-overlay .btn {
+    background-color: var(--light-text);
+    color: var(--dark-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.portfolio-overlay .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
 }
 
 /* Contact Page Styles */
@@ -679,4 +733,27 @@ section h2 {
     .stats-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--light-text);
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.footer .social-links a svg {
+    width: 20px;
+    height: 20px;
 } 
