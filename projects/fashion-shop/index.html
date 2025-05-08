@@ -3,39 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moda & Styl - Sklep z modą</title>
+    <title>Fashion Shop - Projekt Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Moda & Styl</div>
-            <ul>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="/">Fashion Shop</a>
+            </div>
+            <button class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
                 <li><a href="#home">Strona główna</a></li>
                 <li><a href="#products">Produkty</a></li>
                 <li><a href="#about">O nas</a></li>
                 <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <h1>Nowa Kolekcja 2024</h1>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Nowa Kolekcja</h1>
             <p>Odkryj najnowsze trendy w modzie</p>
-            <a href="#products" class="cta-button">Zobacz kolekcję</a>
-        </section>
+            <a href="#products" class="btn">Zobacz kolekcję</a>
+        </div>
+    </section>
 
-        <section id="products">
+    <section id="products" class="products">
+        <div class="section-header">
             <h2>Nasze Produkty</h2>
-            <div class="product-grid">
-                <!-- Produkty będą dodane dynamicznie przez JavaScript -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Wszystkie</button>
+                <button class="filter-btn" data-category="women">Dla kobiet</button>
+                <button class="filter-btn" data-category="men">Dla mężczyzn</button>
+                <button class="filter-btn" data-category="accessories">Akcesoria</button>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" data-category="women">
+                <img src="https://via.placeholder.com/300x400" alt="Sukienka wieczorowa">
+                <div class="product-info">
+                    <h3>Sukienka wieczorowa</h3>
+                    <p class="price">299,99 zł</p>
+                    <button class="btn add-to-cart">Dodaj do koszyka</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="men">
+                <img src="https://via.placeholder.com/300x400" alt="Garnitur">
+                <div class="product-info">
+                    <h3>Garnitur klasyczny</h3>
+                    <p class="price">599,99 zł</p>
+                    <button class="btn add-to-cart">Dodaj do koszyka</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="accessories">
+                <img src="https://via.placeholder.com/300x400" alt="Torebka">
+                <div class="product-info">
+                    <h3>Torebka skórzana</h3>
+                    <p class="price">199,99 zł</p>
+                    <button class="btn add-to-cart">Dodaj do koszyka</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="women">
+                <img src="https://via.placeholder.com/300x400" alt="Bluzka">
+                <div class="product-info">
+                    <h3>Bluzka jedwabna</h3>
+                    <p class="price">149,99 zł</p>
+                    <button class="btn add-to-cart">Dodaj do koszyka</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Moda & Styl. Wszelkie prawa zastrzeżone.</p>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>O nas</h2>
+            <p>Jesteśmy sklepem modowym, który oferuje najwyższej jakości ubrania i akcesoria. Nasza misja to dostarczanie klientom modnych i stylowych produktów w przystępnych cenach.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Kontakt</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Imię i nazwisko" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Wiadomość" required></textarea>
+                <button type="submit" class="btn">Wyślij</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/assets/images/logo.svg" alt="Logo">
+            </div>
+            <div class="footer-description">
+                <p>Tworzymy nowoczesne i responsywne strony internetowe</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Szyfik" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/filip-szykulski" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Filip Szykulski. Wszelkie prawa zastrzeżone.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
