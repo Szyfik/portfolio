@@ -93,7 +93,8 @@
                 
                 <div class="contact-form-container">
                     <h2>Wyślij wiadomość</h2>
-                    <form id="contact-form" class="contact-form">
+                    <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
                         <div class="form-group">
                             <input type="text" id="name" name="name" required>
                             <label for="name">Imię i nazwisko</label>
